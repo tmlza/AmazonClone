@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-300">
+    <h1 class="text-green-700"></h1>
+    <header id="navbar">
+        <nav class="bg-[#00443F] w-full flex py-5 items-center space-between">
+            <div class="flex ms-5 mx-auto">
+                <a href="/home.html"><img class="text-white h-[50px] w-[100px] cursor-pointer mt-3 hover:border hover:border-white p-1"
+                    src="/photos/amazonlogo white.png" alt="amazon logo.png"></a>
+                <p class="flex flex-col text-white mx-5 mt-3 cursor-pointer hover:border hover:border-white">
+                    <span>Deliver to</span>
+                    <h class="flex space-x-1"><i class="fa-solid fa-location-dot mt-1"></i><span
+                            class="mb-2">Myanmar</span></h>
+                </p>
+            </div>
+            <div class="w-[1200px]">
+
+                <form>
+                    <div class="flex w-70">
+                        <button
+                            class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 "
+                            type="button">
+                            Computers<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <div class="relative w-full">
+                            <input type="search"
+                                class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-white placeholder:text-xl rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Search Amazon" required>
+                            <button type="submit"
+                                class="absolute top-0 end-0 h-full p-2.5 text-sm font-medium text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                                <span class="sr-only">Search</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div>
+                <ul class="flex me-5 text-white">
+                    <li class="mx-3 flex space-x-1 items-center hover:border hover:border-white cursor-pointer">
+                        <span><img class="h-[10px] w-[20px] me-1 ms-3" src="/photos/american flag.png" alt=""> </span>
+                        EN <i class="fa-solid fa-caret-down"></i>
+                    </li>
+                    <li class="mx-3 hover:border hover:border-white cursor-pointer"><button class="flex flex-col"><span
+                                class="text-xs">Hello, Sign in</span> <select class="bg-[#00443F]" name="" id="">
+                                <option value="">Accounts & Lists</option>
+                            </select> </button></li>
+                    <li class="mx-3 hover:border hover:border-white cursor-pointer"><button class="flex flex-col"><span
+                                class="text-xs">Return</span>&Orders</button></li>
+                    <li class="mx-3 hover:border hover:border-white cursor-pointer"><button
+                            class="flex text-xl"><span><i class="fa-solid fa-cart-shopping"></i></span>Cart</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sub-header">
+        <div class="bg-[#185851] leading-9">
+            <ul class="flex items-center mx-3 text-white">
+                <li class="hover:border p-1 ms-3 cursor-pointer">
+                    <!-- <span><i class="fa-solid fa-bars text-white"></i></span> -->
+
+                    <span>
+                        <button class="text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+                            <i class="fa-solid fa-bars text-white"></i>
+                        </button>
+                    </span>
+
+                     <div id="drawer-navigation" class="fixed top-0 left-0 z-40 h-screen p-5 overflow-y-auto transition-transform -translate-x-full bg-gray-200 w-64" tabindex="-1" aria-labelledby="drawer-navigation-label">
+                         <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 mt-3"><i class="fa-solid fa-address-book me-3"></i>Hello, Sign in</h5>
+                         <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+                           <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                           </svg>
+                           <span class="sr-only">Close menu</span>
+                        </button>
+                       <div class="py-4 overflow-y-auto mt-5">
+                        <div class="text-gray-900 border-b-2 border-gray-300">
+                            <h4 class="text-xl font-bold mb-3">Digital Content & Devices</h4>
+                            <ul class="flex flex-col space-y-4">
+                                <li class="hover:bg-gray-500">
+                                    Amazon Music
+                                    </li>
+                                <li class="hover:bg-gray-500">Kindle E-readers & Books</li>
+                                <li class="hover:bg-gray-500">
+                                    Amazon Appstore</li>
+                            </ul>
+                        </div>
+                        <hr>
+
+                        <div class="text-gray-900 mt-4 border-b-2 border-gray-300">
+                            <h4 class="text-xl font-bold mb-3">Shop By Department</h4>
+                            <ul class="flex flex-col space-y-4">
+                                <li class="hover:bg-gray-500">
+                                    Electronics</li>
+                                <li class="hover:bg-gray-500">
+                                    Computers <span class="bg-red-700 rounded-full p-2 ms-5">This One</span></li>
+                                <li class="hover:bg-gray-500">
+                                    Smart Home</li>
+                                <li class="hover:bg-gray-500">
+                                    Arts & Crafts</li>
+                                <li class="hover:bg-gray-500">
+                                    See All
+                                    </li>
+                            </ul>
+                        </div>
+
+                        <div class="text-gray-900 mt-4 border-b-2 border-gray-300">
+                            <h4 class="text-xl font-bold mb-3">Programs & Features</h4>
+                            <ul class="flex flex-col space-y-4">
+                                <li class="hover:bg-gray-500">
+                                    Gift Cards</li>
+                                <li class="hover:bg-gray-500">
+                                    Shop By Interest</li>
+                                <li class="hover:bg-gray-500">
+                                    Amazon Live</li>
+                                <li class="hover:bg-gray-500">
+                                    International Shopping</li>
+                                <li class="hover:bg-gray-500">
+                                    See All
+                                    </li>
+                            </ul>
+                        </div>
+
+                       </div>
+                     </div>
+                     
+                    <span>All</span>
+                </li>
+                <li class="hover:border p-1 ms-3 cursor-pointer">Today's Deals</li>
+                <li class="hover:border p-1 ms-3 cursor-pointer">Registry</li>
+                <li class="hover:border p-1 ms-3 cursor-pointer">Customer Service</li>
+                <li class="hover:border p-1 ms-3 cursor-pointer">Gift Cards</li>
+                <li class="hover:border p-1 ms-3 cursor-pointer">Sell</li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="flex flex-col p-5 bg-white mt-[50px]">
+        <div class="container mx-auto grid grid-cols-11">
+            <div class="col-span-1 h-[450px] flex">
+                <ul class="grid grid-cols-1 space-y-1">
+                    <li><img class="h-[50px] w-[50px] ms-[70px]" src="/photos/computerPageProducts/1.jpeg" alt=""></li>
+                    <li><img class="h-[50px] w-[50px] ms-[70px]" src="/photos/computerPageProducts/1.2.jpg" alt=""></li>
+                    <li><img class="h-[50px] w-[50px] ms-[70px]" src="/photos/computerPageProducts/1.3.jpg" alt=""></li>
+                    <li><img class="h-[50px] w-[50px] ms-[70px]" src="/photos/computerPageProducts/1.4.jpg" alt=""></li>
+                    <li><img class="h-[50px] w-[50px] ms-[70px]" src="/photos/computerPageProducts/1.5.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="col-span-5 flex flex-col">
+                <h2 class="text-bold h-[50px] bg-blue-200 flex justify-center items-center uppercase">latest model computer</h2>
+                <div class="p-5 flex mx-auto">
+                    <img class="h-[350px] w-[500px]" src="/photos/computerPageProducts/1.jpeg" alt="product detail photo">
+                </div>
+            </div>
+            <div class="col-span-5 ms-4 grid grid-cols-2">
+                <div class="flex flex-col">
+                    <div class="border-b-2 border-gray-900 border-rounded p-3">
+                        <p class="text-xl font-bold">PUSOKEI TH3P4G3 Laptop Graphics Docking Station, Aluminum Alloy Laptop External Graphics Card, Plug and Play with SFX and ATX Brackets, 20V3A 60W Charging and PCIE3.0X4</p>
+                        <p class="text-green-500">Brand: PUSOKEI</p>
+                        <p>5.0 <i class="ms-2 fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-caret-down"></i> <small class="ms-3">1 rating</small></p>
+                    </div>
+                    <div class="border-b-2 border-gray-900 border-rounded p-3">
+                        <p>Currently unavailable.</p>
+                        <small>We don't know when or if this item will be back in stock.</small>
+                        <ul class="flex flex-col mt-3">
+                            <li class="grid grid-cols-2"><span class="font-bold">Brand</span><span>PUSOKEI</span></li>
+                            <li class="grid grid-cols-2"><span class="font-bold">Hardware Interface</span><span>USB</span></li>
+                            <li class="grid grid-cols-2"><span class="font-bold">Total HDMI Ports</span><span>1</span></li>
+                            <li class="grid grid-cols-2"><span class="font-bold">Wattage</span><span>60 watts</span></li>
+                            <li class="grid grid-cols-2"><span class="font-bold">Brand</span><span>PUSOKEI</span></li>
+                        </ul>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="ms-4">
+                    <div class="border border-gray-500 rounded p-3">
+                        <p>No featured offers available</p>
+                        <p class=""><span class="text-green-500">Learn more </span><i class="fa-solid fa-caret-down"></i></p>
+                    </div>
+                    <div class="border border-gray-500 rounded p-3 mt-5">
+                        <div class="text-center border-b-2 border-gray-500 p-3">
+                            <p class="text-red-700">Currently unavailable.</p>
+                            <p>We don't know when or if this item will be back in stock.</p>
+                            <p class="mt-3"><i class="fa-solid fa-location-dot"></i><span class="text-green-500 ms-2">delivery to myanmar</span></p>
+                        </div>
+                        <p class="border border-gray-500 p-5 rounded-xl mt-5 cursor-pointer">Add to List</p>
+                    </div>
+                </div>
+            </div>
+        </div> <br> <br>
+        <hr>
+        <div class="p-5 border boder-gray-700 rounded p-3">
+            <h1 class="text-xl font-bold mb-4">Product information</h1>
+            <div class="grid grid-cols-2">
+                <div>
+                    <ul class="flex flex-col ms-5">
+                        <hr>
+                        <li class="flex justify-between my-2"><span class="bg-gray-200 w-1/2">Product Dimensions</span><span>6.54 x 3.58 x 1.1 inches</span></li><hr>
+                    </ul>
+                    <ul class="flex flex-col ms-5">
+                        <hr>
+                        <li class="flex justify-between my-2"><span class="bg-gray-200 w-1/2">PItem Weight</span><span>	1.17 pounds </span></li><hr>
+                    </ul>
+                    <ul class="flex flex-col ms-5">
+                        <hr>
+                        <li class="flex justify-between my-2"><span class="bg-gray-200 w-1/2">Manufacturer</span><span>PUSOKEI</span></li><hr>
+                    </ul>
+                    <ul class="flex flex-col ms-5">
+                        <hr>
+                        <li class="flex justify-between my-2"><span class="bg-gray-200 w-1/2">ASIN</span><span>B0BWYMHSSH</span></li><hr>
+                    </ul>
+                    <ul class="flex flex-col ms-5">
+                        <hr>
+                        <li class="flex justify-between my-2"><span class="bg-gray-200 w-1/2">Item model number</span><span>PUSOKEIzr453qubvo</span></li><hr>
+                    </ul>
+                    <ul class="flex flex-col ms-5">
+                        <hr>
+                        <li class="flex justify-between my-2"><span class="bg-gray-200 w-1/2">Manufacturer</span><span>PUSOKEI</span></li><hr>
+                    </ul>
+                    <ul class="flex flex-col ms-5">
+                        <hr>
+                        <li class="flex justify-between my-2"><span class="bg-gray-200 w-1/2">ASIN</span><span>B0BWYMHSSH</span></li><hr>
+                    </ul>
+                    <ul class="flex flex-col ms-5">
+                        <hr>
+                        <li class="flex justify-between my-2"><span class="bg-gray-200 w-1/2">Item model number</span><span>PUSOKEIzr453qubvo</span></li><hr>
+                    </ul>
+                </div>
+                
+                <div class="pb-3 ms-5">
+                    <h2 class="uppercase mb-3 ms-5">feedback</h2>
+                    <hr class="ms-5">
+                    <p class="mt-3 ms-5">Would you like to <span class="text-green-500">tell us about a lower price? </span><i class="fa-solid fa-caret-down"></i> </p>
+                </div>
+                
+            </div>
+            <p class="mt-5 p-4 ">
+                <p class="text-xl font-bold mb-3">Videos</p>
+                <p class="text-green-500">Help others learn more about this product by uploading a video!</p>
+                <p class="border border-gray-200 rounded-xl mt-3 text-center w-[150px] p-1 cursor-pointer hover:border-gray-700">Upload your video</p>
+            </p>
+        </div> <br> <br>
+        <hr>
+
+       <div class="border boder-gray-700 rounded p-3 my-4 flex justify-center">
+           <ul class="border boder-gray-700 rounded p-3 flex flex-col my-4">
+            <h2 class="text-xl font-bold mb-4">Prouct Desciptions</h2>
+            <li>Specification:</li>
+            <li>Item Type: Graphics Docking Station</li>
+            <li> Material: Aluminum Alloy</li>
+            <li>
+                Model: TH3P4G3</li>
+            <li>
+                Product Size: Approx.166 x 91 x 28mm / 6.5 x 3.6 x 1.1in</li>
+            <li>
+                Transfer Rate: 40Gbps</li>
+            <li>
+                Usb3.0: 5Gbps</li>
+            <li>
+                Daisy Chain: Support</li>
+            <li>
+                Power Supply: ATX SFX FLEX Other</li>
+            <li>
+                Graphics Card Size Support: Unlimited</li>
+            <li>
+                PD Charging: Maximum 20V3A 60W</li>
+            <li>
+                Usb Function: USB: 5V2A,</li>
+            <li class="mb-4"> Type C: 5V3A</li>
+            <li class="mt-4">How to Use:</li>
+            <li class="mb-4">Install to use</li>
+            <li class="mt-4">Package List:</li>
+            <li>1 x Graphics Card Docking Station</li>
+            <li>
+                1 x ATX Bracket</li>
+            <li>
+                1 x SFX Bracket</li>
+            <li>
+                1 x Data Cable/li>
+            <li>
+                2 x Screws</li>
+            <li>
+                2 x Plastic Block</li>
+            <li>
+                1 x Screwdriver</li>
+            <li>
+                1 x User Manual</li>
+        </ul>
+       </div> <br> <br>
+       <hr>
+
+       <div class="flex flex-col p-4">
+        <h2 class="text-xl font-bold my-3">From the Brand</h2>
+        <div class="">
+            <!-- <img class="h-[700px] w-[1700px] mx-atuo my-4" src="/photos/computerPageProducts/2.1.jpeg" alt=""> -->
+            <div class="carousel p-4">
+                <div class="relative h-[750px] w-full" data-carousel="slide">
+                   
+                    <div class="h-full relative bg-gray-100 rounded-lg h-60">
+                        
+                        <div class="h-full my-auto flex p-3 space-x-3 h-48 w-full duration-700 ease-in-out" data-carousel-item>
+                                <img class="w-full" src="/photos/computerPageProducts/1.2.jpg"
+                                    alt="">
+                        </div>
+                        <div class="h-full my-auto flex p-3 space-x-3 h-48 w-full duration-700 ease-in-out" data-carousel-item>
+                            <img class="w-full" src="/photos/computerPageProducts/2.1.jpeg"
+                                alt="">
+                        </div>
+                        <div class="h-full my-auto flex p-3 space-x-3 h-48 w-full duration-700 ease-in-out" data-carousel-item>
+                            <img class="w-full" src="/photos/computerPageProducts/2.1.jpeg"
+                            alt="">
+                        </div>
+                        <div class="h-full my-auto flex p-3 space-x-3 h-48 w-full duration-700 ease-in-out" data-carousel-item>
+                                <img class="w-full" src="/photos/computerPageProducts/2.1.jpeg"
+                                    alt="">
+                        </div>
+                        <div class="h-full my-auto flex p-3 space-x-3 h-48 w-full duration-700 ease-in-out" data-carousel-item>
+                                <img class="w-full" src="/photos/computerPageProducts/2.1.jpeg"
+                                    alt="">
+                </div>
+                        
+            </div>
+                    
+                    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                            </svg>
+                            <span class="sr-only text-gray-700">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                            </svg>
+                            <span class="sr-only text-gray-700">Next</span>
+                        </span>
+                    </button>  
+                
+            </div>
+        </div>
+       </div> <br> <br>
+       <hr>
+
+       <div class="p-4">
+        <h2 class="text-xl font-bold my-3">Important Infomation</h2>
+        <p class="ms-5">To report an issue with this product, <span class="text-green-500 hover:text-red-400 cursor-pointer">click here</span>.</p>
+       </div> <br> <br>
+       <hr> <br> <br> <hr>
+       
+       <div class="p-3">
+        <h2 class="text-xl font-bold mb-3">Brands in this category on Amazon</h2>
+        <small>Sponsored</small>
+        <div class="grid grid-cols-3 p-5 space-x-4">
+            <div class="card grid grid-cols-2 border border-gray-500 rounded bg-white">
+                <img class="h-[150px] w-[150px] ms-[50px]" src="/photos/computerPageProducts/3.1.jpg" alt="">
+                <div class="bg-gray-200 p-3">
+                    <p class="text-xl font-bold">Targus</p>
+                    <p class="my-5">Targus Docking Station:HOME OFFICE MUST HAVES</p>
+                    <small class="text-green-500 hover:text-red-400 cursor-pointer text-xs">Shop Targus</small>
+                </div>
+            </div>
+            <div class="card grid grid-cols-2 border border-gray-500 rounded bg-white">
+                <img class="h-[150px] w-[150px] ms-[50px]" src="/photos/computerPageProducts/3.2.jpg" alt="">
+                <div class="bg-gray-200 p-3">
+                    <p class="text-xl font-bold">Targus</p>
+                    <p class="my-5">Targus Docking Station:HOME OFFICE MUST HAVES</p>
+                    <small class="text-green-500 hover:text-red-400 cursor-pointer text-xs">Shop Targus</small>
+                </div>
+            </div>
+            <div class="card grid grid-cols-2 border border-gray-500 rounded bg-white">
+                <img class="h-[150px] w-[150px] ms-[50px]" src="/photos/computerPageProducts/3.3.jpg" alt="">
+                <div class="bg-gray-200 p-3">
+                    <p class="text-xl font-bold">Targus</p>
+                    <p class="my-5">Targus Docking Station:HOME OFFICE MUST HAVES</p>
+                    <small class="text-green-500 hover:text-red-400 cursor-pointer text-xs">Shop Targus</small>
+                </div>
+            </div>
+        </div>
+       </div> <br> <br>
+       <hr>
+
+       <div class="flex p-4">
+        <div class="mx-[150px]">
+            <h2 class="text-xl font-bold">Customer reviews</h2>
+            <p><i class="ms-2 fa-solid text-yellow-500 fa-star"></i><i class="fa-solid text-yellow-500 fa-star"></i><i class="fa-solid text-yellow-500 fa-star"></i><i class="fa-solid text-yellow-500 fa-star"></i><i class="fa-solid text-yellow-500 fa-star"></i> <span class="ms-3">5 out of 5</span></p>
+            <small class="mb-4 ms-4">1 global rating</small>
+            <div class="flex flex-col space-y-3 mt-4 w-[300px]">
+            <p class="flex">5 star <span class="border border-gray-500 rounded-xl mx-4 bg-yellow-700 h-[30px] w-[150px]"></span><span>100%</span></p>
+            <p class="flex">4 star <span class="border border-gray-500 rounded-xl mx-4 bg-white h-[30px] w-[150px]"></span><span>0%</span></p>
+            <p class="flex">3 star <span class="border border-gray-500 rounded-xl mx-4 bg-white h-[30px] w-[150px]"></span><span>0%</span></p>
+            <p class="flex">2 star <span class="border border-gray-500 rounded-xl mx-4 bg-white h-[30px] w-[150px]"></span><span>0%</span></p>
+            <p class="flex">1 star <span class="border border-gray-500 rounded-xl mx-4 bg-white h-[30px] w-[150px]"></span><span>0%</span></p>
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <div class="p-4">
+                <h2 class="text-xl font-bold mb-4">Review with Images <span class="text-xs cursor-pointer text-green-500 ms-[200px]">See all photos</span></h2>
+                <div class="flex">
+                    <img class="h-[150px] w-[150px] mx-3 my-3" src="/photos/computerPageProducts/4.1.jpg" alt="">
+                    <img class="h-[150px] w-[150px] my-3" src="/photos/computerPageProducts/4.2.jpg" alt="">
+                </div> 
+            </div> <br>
+            <hr>
+            <br> <hr>
+
+            <div>
+                <h2 class="text-xl font-bold my-4">Top review from the United States</h2>
+                <div class="flex-col">
+                    <h2><i class="fa-regular fa-user text-xl me-3"></i>Ruben</h2>
+                    <p><i class="fa-solid text-yellow-500 fa-star"></i><i class="fa-solid text-yellow-500 fa-star"></i><i class="fa-solid text-yellow-500 fa-star"></i><i class="fa-solid text-yellow-500 fa-star"></i><i class="fa-solid text-yellow-500 fa-star"></i>5.0 out of 5 stars Thunderbolt compatibility necessary.</p>
+                    <small class="text-sm text-slate-400">Reviewed in the United States on October 23, 2023</small><br>
+                    <small class="text-sm text-red-400">Verified Purchase</small> <br>
+                    <p class="flex flex-col">
+                        <p>Product is great. Does exactly as it is described. Help turn your gpu in to an E-gpu. Device must be thunderbolt 3 or 4 compatible. After building this set up I instantly saw gains in fps and benchmarking. Whole build cost less than name brand enclosures alone. Ran out of funds but would love to get there enclosures to complete.</p> <br>
+                        <p>
+                            This is perfect for laptops that have a decent amount of RAM, good processor, and lacking in the gpu department. You use your laptop for your daily grind and get home plug in the thunderbolt and game to relieve some of that stress.
+                        </p> <br>
+                        <p>GPU - EVGA 1070ti FTW PSU - Thermaltake Toughpower Gf A3 80+gold</p>
+                        <div class="flex">
+                            <img class="h-[150px] w-[250px] mx-3 my-3" src="/photos/computerPageProducts/4.1.jpg" alt="">
+                            <img class="h-[150px] w-[250px] my-3" src="/photos/computerPageProducts/4.2.jpg" alt="">
+                        </div>
+                        <small class="text-sm text-slate-400">4 people found this helpful</small> <br>
+                        <p class="flex space-x-4 mt-4"><span class="border rounded-lg p-2">Helpful</span><span class="border-s-2 p-2">Report</span></p>
+                    </p>
+                </div>
+            </div>
+        </div>
+       </div>
+    </main>
+
+    <footer class="mb-4 mt-[50px]">
+        <div class="flex items-center p-5 text-center leading-9 bg-gray-700">
+            <h1 class="mx-auto cursor-pointer hover:text-white"><a href="#navbar">Back to Top</a></h1>
+        </div>
+
+        <div id="footer bg-[#23313F] text-slate-400">
+            <div class="flex bg-[#23313F] text-slate-400 items-center p-5 justify-evenly">
+                <ul class="flex-column gap-3">
+                    <li class="text-xl mb-4">Get To Know Us</li>
+                    <li class="cursor-pointer hover:underline">Careers</li>
+                    <li class="cursor-pointer hover:underline">Blog</li>
+                    <li class="cursor-pointer hover:underline">About Amazon</li>
+                    <li class="cursor-pointer hover:underline">Investor Relations</li>
+                    <li class="cursor-pointer hover:underline">Amazon Devices</li>
+                    <li class="cursor-pointer hover:underline">Amazon Science</li>
+                </ul>
+
+                <ul class="flex-column gap-3">
+                    <li class="text-xl mb-4">Get To Know Us</li>
+                    <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                    <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                    <li class="cursor-pointer hover:underline">Sell apps on Amazon</li>
+                    <li class="cursor-pointer hover:underline">Become an Affiliate</li>
+                    <li class="cursor-pointer hover:underline">Advertise Your Products</li>
+                    <li class="cursor-pointer hover:underline">Advertise Your Products</li>
+                    <li class="cursor-pointer hover:underline">Host an Amazon Hub</li>
+                    <li class="cursor-pointer hover:underline">›See More Make Money with Us</li>
+                </ul>
+
+                <ul class="flex-column gap-3">
+                    <li class="text-xl mb-4">Get To Know Us</li>
+                    <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                    <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                    <li class="cursor-pointer hover:underline">Sell apps on Amazon</li>
+                    <li class="cursor-pointer hover:underline">Become an Affiliate</li>
+                    <li class="cursor-pointer hover:underline">Advertise Your Products</li>
+                    <li class="cursor-pointer hover:underline">Advertise Your Products</li>
+                    <li class="cursor-pointer hover:underline">Host an Amazon Hub</li>
+                    <li class="cursor-pointer hover:underline">›See More Make Money with Us</li>
+                </ul>   
+                </ul>
+
+                <ul class="flex-column gap-3">
+                    <li class="text-xl mb-4">Get To Know Us</li>
+                    <li class="cursor-pointer hover:underline">Careers</li>
+                    <li class="cursor-pointer hover:underline">Blog</li>
+                    <li class="cursor-pointer hover:underline">About Amazon</li>
+                    <li class="cursor-pointer hover:underline">Investor Relations</li>
+                    <li class="cursor-pointer hover:underline">Amazon Devices</li>
+                    <li class="cursor-pointer hover:underline">Amazon Science</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 text-slate-50 p-3 flex items-center justify-center space-x-8">
+                <h3 class="cursor-pointer hover:border hover:border-white p-1"><img class="h-[50px] w-[100px]"
+                        src="/photos/amazonlogo white.png" alt=""></h3>
+                <button class="bg-tranparent border border-white p-1 ">
+                    <i class="fa-solid fa-globe"></i>
+                    EN <i class="fa-solid fa-caret-down"></i></li>
+                </button>
+                <button class="flex space-x-1 border border-white p-1">
+                    <span>$</span>
+                    <p>USD-Us.Dollar</p>
+                </button>
+                <button class="flex space-x-1 border border-white p-1">
+                    <img class="h-[15px] w-[30px] mt-1" src="/photos/american flag.png" alt="">
+                    <p>Uinted States</p>
+                </button>
+            </div>
+
+            <div class="footer bg-[#131B23] text-slate-400 p-5">
+
+                <div class="text-xs flex justify-center space-x-3 mb-5">
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Careers Blog</li>
+                            <li class="cursor-pointer hover:underline">About Amazon</li>
+                            <li class="cursor-pointer hover:underline">Investor Relations </li>
+                            <li class="cursor-pointer hover:underline">Amazon Devices</li>
+                            <li class="cursor-pointer hover:underline">Amazon Science</li>
+                        </ul>
+
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon≈</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                            <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                            <li class="cursor-pointer hover:underline">Sell apps on Amazon Become an Affiliate</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                            <li class="cursor-pointer hover:underline">Host an Amazon Hub See More Make Money with Us</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                        </ul>
+
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon≈</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                            <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                            <li class="cursor-pointer hover:underline">Sell apps on Amazon Become an Affiliate</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                            <li class="cursor-pointer hover:underline">Host an Amazon Hub See More Make Money with Us</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Careers Blog</li>
+                            <li class="cursor-pointer hover:underline">About Amazon</li>
+                            <li class="cursor-pointer hover:underline">Investor Relations </li>
+                            <li class="cursor-pointer hover:underline">Amazon Devices</li>
+                            <li class="cursor-pointer hover:underline">Amazon Science</li>
+                        </ul>
+
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon≈</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                            <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                            <li class="cursor-pointer hover:underline">Sell apps on Amazon Become an Affiliate</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                            <li class="cursor-pointer hover:underline">Host an Amazon Hub See More Make Money with Us</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                        </ul>
+
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon≈</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                            <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                            <li class="cursor-pointer hover:underline">Sell apps on Amazon Become an Affiliate</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                            <li class="cursor-pointer hover:underline">Host an Amazon Hub See More Make Money with Us</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex items-center mt-3 justify-center  flex-col">
+                    <p class="flex space-x-5">
+                        <small>Conditions of Use</small>
+                        <small>Privacy Notice</small>
+                        <small>Your Ads Privacy Choices</small>
+                    </p>
+                    <p>
+                        <small>© 1996-2023, Amazon.com, Inc. or its affiliates</small>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</body>
+
+</html>

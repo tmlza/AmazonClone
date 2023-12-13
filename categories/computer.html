@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-300">
+    <h1 class="text-green-700"></h1>
+    <header id="navbar">
+        <nav class="bg-[#00443F] w-full flex py-5 items-center space-between">
+            <div class="flex ms-5 mx-auto">
+                <a href="/home.html"><img class="text-white h-[50px] w-[100px] cursor-pointer mt-3 hover:border hover:border-white p-1"
+                    src="/photos/amazonlogo white.png" alt="amazon logo.png"></a>
+                <p class="flex flex-col text-white mx-5 mt-3 cursor-pointer hover:border hover:border-white">
+                    <span>Deliver to</span>
+                    <h class="flex space-x-1"><i class="fa-solid fa-location-dot mt-1"></i><span
+                            class="mb-2">Myanmar</span></h>
+                </p>
+            </div>
+            <div class="w-[1200px]">
+
+                <form>
+                    <div class="flex w-70">
+                        <button
+                            class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 "
+                            type="button">
+                            Computers<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <div class="relative w-full">
+                            <input type="search"
+                                class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-white placeholder:text-xl rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Search Amazon" required>
+                            <button type="submit"
+                                class="absolute top-0 end-0 h-full p-2.5 text-sm font-medium text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                                <span class="sr-only">Search</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div>
+                <ul class="flex me-5 text-white">
+                    <li class="mx-3 flex space-x-1 items-center hover:border hover:border-white cursor-pointer">
+                        <span><img class="h-[10px] w-[20px] me-1 ms-3" src="/photos/american flag.png" alt=""> </span>
+                        EN <i class="fa-solid fa-caret-down"></i>
+                    </li>
+                    <li class="mx-3 hover:border hover:border-white cursor-pointer"><button class="flex flex-col"><span
+                                class="text-xs">Hello, Sign in</span> <select class="bg-[#00443F]" name="" id="">
+                                <option value="">Accounts & Lists</option>
+                            </select> </button></li>
+                    <li class="mx-3 hover:border hover:border-white cursor-pointer"><button class="flex flex-col"><span
+                                class="text-xs">Return</span>&Orders</button></li>
+                    <li class="mx-3 hover:border hover:border-white cursor-pointer"><button
+                            class="flex text-xl"><span><i class="fa-solid fa-cart-shopping"></i></span>Cart</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="sub-header">
+        <div class="bg-[#185851] leading-9">
+            <ul class="flex items-center mx-3 text-white">
+                <li class="hover:border p-1 ms-3 cursor-pointer">
+                    <!-- <span><i class="fa-solid fa-bars text-white"></i></span> -->
+
+                    <span>
+                        <button class="text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+                            <i class="fa-solid fa-bars text-white"></i>
+                        </button>
+                    </span>
+
+                     <div id="drawer-navigation" class="fixed top-0 left-0 z-40 h-screen p-5 overflow-y-auto transition-transform -translate-x-full bg-gray-200 w-64" tabindex="-1" aria-labelledby="drawer-navigation-label">
+                         <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 mt-3"><i class="fa-solid fa-address-book me-3"></i>Hello, Sign in</h5>
+                         <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+                           <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                           </svg>
+                           <span class="sr-only">Close menu</span>
+                        </button>
+                       <div class="py-4 overflow-y-auto mt-5">
+                        <div class="text-gray-900 border-b-2 border-gray-300">
+                            <h4 class="text-xl font-bold mb-3">Digital Content & Devices</h4>
+                            <ul class="flex flex-col space-y-4">
+                                <li class="hover:bg-gray-500">
+                                    Amazon Music
+                                    </li>
+                                <li class="hover:bg-gray-500">Kindle E-readers & Books</li>
+                                <li class="hover:bg-gray-500">
+                                    Amazon Appstore</li>
+                            </ul>
+                        </div>
+                        <hr>
+
+                        <div class="text-gray-900 mt-4 border-b-2 border-gray-300">
+                            <h4 class="text-xl font-bold mb-3">Shop By Department</h4>
+                            <ul class="flex flex-col space-y-4">
+                                <li class="hover:bg-gray-500">
+                                    Electronics</li>
+                                <li class="hover:bg-gray-500">
+                                    Computers <span class="bg-red-700 rounded-full p-2 ms-5">This One</span></li>
+                                <li class="hover:bg-gray-500">
+                                    Smart Home</li>
+                                <li class="hover:bg-gray-500">
+                                    Arts & Crafts</li>
+                                <li class="hover:bg-gray-500">
+                                    See All
+                                    </li>
+                            </ul>
+                        </div>
+
+                        <div class="text-gray-900 mt-4 border-b-2 border-gray-300">
+                            <h4 class="text-xl font-bold mb-3">Programs & Features</h4>
+                            <ul class="flex flex-col space-y-4">
+                                <li class="hover:bg-gray-500">
+                                    Gift Cards</li>
+                                <li class="hover:bg-gray-500">
+                                    Shop By Interest</li>
+                                <li class="hover:bg-gray-500">
+                                    Amazon Live</li>
+                                <li class="hover:bg-gray-500">
+                                    International Shopping</li>
+                                <li class="hover:bg-gray-500">
+                                    See All
+                                    </li>
+                            </ul>
+                        </div>
+
+                       </div>
+                     </div>
+                     
+                    <span>All</span>
+                </li>
+                <li class="hover:border p-1 ms-3 cursor-pointer">Today's Deals</li>
+                <li class="hover:border p-1 ms-3 cursor-pointer">Registry</li>
+                <li class="hover:border p-1 ms-3 cursor-pointer">Customer Service</li>
+                <li class="hover:border p-1 ms-3 cursor-pointer">Gift Cards</li>
+                <li class="hover:border p-1 ms-3 cursor-pointer">Sell</li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="">
+        <div class="container mx-auto">
+            <!-- <div class="">
+                <img class="w-100 h-100" src="https://m.media-amazon.com/images/I/71j8damPo5L._SX3000_.jpg"
+                    alt="Background Photo">
+            </div> -->
+            <div class="mt-5 card">
+                <div class="">
+                    <div class="grid    grid-cols-5 gap-3 mb-5">
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full mb-2"
+                                            src="https://m.media-amazon.com/images/I/51GjwKMEziL._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED 16:10 Touch Display, DialPad, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/814PVSAztPL._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/71kQLdb2kEL._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED Touch Display, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full mb-3"
+                                            src="https://m.media-amazon.com/images/I/71ea9V7hiKL._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full mb-2"
+                                            src="https://m.media-amazon.com/images/I/710aclgyT+L._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/71mExFQsf6L._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED 16:10 Touch Display, DialPad, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                    <small>Shop now</small></a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/61jKryQlY1L._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED 16:10 Touch Display, DialPad, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full mb-3"
+                                            src="https://m.media-amazon.com/images/I/51eF0GBAiuL._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/71mExFQsf6L._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED 16:10 Touch Display, DialPad, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/61jKryQlY1L._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED 16:10 Touch Display, DialPad, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full mb-2"
+                                            src="https://m.media-amazon.com/images/I/51GjwKMEziL._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED 16:10 Touch Display, DialPad, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/814PVSAztPL._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/71kQLdb2kEL._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED Touch Display, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full mb-3"
+                                            src="https://m.media-amazon.com/images/I/71ea9V7hiKL._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full mb-2"
+                                            src="https://m.media-amazon.com/images/I/710aclgyT+L._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/71mExFQsf6L._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED 16:10 Touch Display, DialPad, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/61jKryQlY1L._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED 16:10 Touch Display, DialPad, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full mb-3"
+                                            src="https://m.media-amazon.com/images/I/51eF0GBAiuL._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/71mExFQsf6L._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED 16:10 Touch Display, DialPad, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col">
+                                <h3 class="text-2xl ms-5">Card Title</h3>
+                                <div class="flex flex-col">
+                                    <a href="#">
+                                        <img class="p-8 rounded-t-lg w-full h-full"
+                                            src="https://m.media-amazon.com/images/I/61jKryQlY1L._AC_UL320_.jpg"
+                                            alt="product image" />
+                                            <p class="ms-5">ASUS Zenbook Pro 14 OLED 14.5” OLED 16:10 Touch Display, DialPad, Intel i9-13900H CPU, GeForce RTX 4070 Graphics, 32GB RAM, 1TB SSD..</p>
+                                            <span class="ms-5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <small class="ms-2 mb-5"><i class="fa-solid fa-caret-down"></i>78</small>
+                                    </a>
+                                    <p class="text-muted ms-5">No featured offers available</p> 
+                                    <p class="ms-5">$2,095.00 <span class="text-green-800">(6 new offers)</span></p> 
+                                    <p class="ms-2 my-3 text-gray-500 hover:text-gray-900">
+                                        <a class="ms-2 my-3 text-gray-500 hover:text-gray-900" href="#">
+                                            <small>Shop now</small></a>
+                                            <a class="ms-2 my-3 text-white hover:text-gray-900" href="/categories/detail.html">
+                                                <small class="bg-blue-300 rounded p-1 uppercase">details..</small></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </main>
+
+    <footer class="mb-4 mt-[50px]">
+        <div class="flex items-center p-5 text-center leading-9 bg-gray-700">
+            <h1 class="mx-auto cursor-pointer hover:text-white"><a href="#navbar">Back to Top</a></h1>
+        </div>
+
+        <div id="footer bg-[#23313F] text-slate-400">
+            <div class="flex bg-[#23313F] text-slate-400 items-center p-5 justify-evenly">
+                <ul class="flex-column gap-3">
+                    <li class="text-xl mb-4">Get To Know Us</li>
+                    <li class="cursor-pointer hover:underline">Careers</li>
+                    <li class="cursor-pointer hover:underline">Blog</li>
+                    <li class="cursor-pointer hover:underline">About Amazon</li>
+                    <li class="cursor-pointer hover:underline">Investor Relations</li>
+                    <li class="cursor-pointer hover:underline">Amazon Devices</li>
+                    <li class="cursor-pointer hover:underline">Amazon Science</li>
+                </ul>
+
+                <ul class="flex-column gap-3">
+                    <li class="text-xl mb-4">Get To Know Us</li>
+                    <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                    <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                    <li class="cursor-pointer hover:underline">Sell apps on Amazon</li>
+                    <li class="cursor-pointer hover:underline">Become an Affiliate</li>
+                    <li class="cursor-pointer hover:underline">Advertise Your Products</li>
+                    <li class="cursor-pointer hover:underline">Advertise Your Products</li>
+                    <li class="cursor-pointer hover:underline">Host an Amazon Hub</li>
+                    <li class="cursor-pointer hover:underline">›See More Make Money with Us</li>
+                </ul>
+
+                <ul class="flex-column gap-3">
+                    <li class="text-xl mb-4">Get To Know Us</li>
+                    <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                    <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                    <li class="cursor-pointer hover:underline">Sell apps on Amazon</li>
+                    <li class="cursor-pointer hover:underline">Become an Affiliate</li>
+                    <li class="cursor-pointer hover:underline">Advertise Your Products</li>
+                    <li class="cursor-pointer hover:underline">Advertise Your Products</li>
+                    <li class="cursor-pointer hover:underline">Host an Amazon Hub</li>
+                    <li class="cursor-pointer hover:underline">›See More Make Money with Us</li>
+                </ul>   
+                </ul>
+
+                <ul class="flex-column gap-3">
+                    <li class="text-xl mb-4">Get To Know Us</li>
+                    <li class="cursor-pointer hover:underline">Careers</li>
+                    <li class="cursor-pointer hover:underline">Blog</li>
+                    <li class="cursor-pointer hover:underline">About Amazon</li>
+                    <li class="cursor-pointer hover:underline">Investor Relations</li>
+                    <li class="cursor-pointer hover:underline">Amazon Devices</li>
+                    <li class="cursor-pointer hover:underline">Amazon Science</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 text-slate-50 p-3 flex items-center justify-center space-x-8">
+                <h3 class="cursor-pointer hover:border hover:border-white p-1"><img class="h-[50px] w-[100px]"
+                        src="/photos/amazonlogo white.png" alt=""></h3>
+                <button class="bg-tranparent border border-white p-1 ">
+                    <i class="fa-solid fa-globe"></i>
+                    EN <i class="fa-solid fa-caret-down"></i></li>
+                </button>
+                <button class="flex space-x-1 border border-white p-1">
+                    <span>$</span>
+                    <p>USD-Us.Dollar</p>
+                </button>
+                <button class="flex space-x-1 border border-white p-1">
+                    <img class="h-[15px] w-[30px] mt-1" src="/photos/american flag.png" alt="">
+                    <p>Uinted States</p>
+                </button>
+            </div>
+
+            <div class="footer bg-[#131B23] text-slate-400 p-5">
+
+                <div class="text-xs flex justify-center space-x-3 mb-5">
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Careers Blog</li>
+                            <li class="cursor-pointer hover:underline">About Amazon</li>
+                            <li class="cursor-pointer hover:underline">Investor Relations </li>
+                            <li class="cursor-pointer hover:underline">Amazon Devices</li>
+                            <li class="cursor-pointer hover:underline">Amazon Science</li>
+                        </ul>
+
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon≈</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                            <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                            <li class="cursor-pointer hover:underline">Sell apps on Amazon Become an Affiliate</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                            <li class="cursor-pointer hover:underline">Host an Amazon Hub See More Make Money with Us</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                        </ul>
+
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon≈</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                            <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                            <li class="cursor-pointer hover:underline">Sell apps on Amazon Become an Affiliate</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                            <li class="cursor-pointer hover:underline">Host an Amazon Hub See More Make Money with Us</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Get To Know Us</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Careers Blog</li>
+                            <li class="cursor-pointer hover:underline">About Amazon</li>
+                            <li class="cursor-pointer hover:underline">Investor Relations </li>
+                            <li class="cursor-pointer hover:underline">Amazon Devices</li>
+                            <li class="cursor-pointer hover:underline">Amazon Science</li>
+                        </ul>
+
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon≈</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                            <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                            <li class="cursor-pointer hover:underline">Sell apps on Amazon Become an Affiliate</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                            <li class="cursor-pointer hover:underline">Host an Amazon Hub See More Make Money with Us</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                        </ul>
+
+                        <ul class="flex-column gap-3">
+                            <li class="text-xl">Get To Know Us</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon≈</li>
+                            <li class="cursor-pointer hover:underline">Sell products on Amazon</li>
+                            <li class="cursor-pointer hover:underline">Sell on Amazon Business</li>
+                            <li class="cursor-pointer hover:underline">Sell apps on Amazon Become an Affiliate</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                            <li class="cursor-pointer hover:underline">Host an Amazon Hub See More Make Money with Us</li>
+                            <li class="cursor-pointer hover:underline">Advertise Your Products Self-Publish with Us</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex items-center mt-3 justify-center  flex-col">
+                    <p class="flex space-x-5">
+                        <small>Conditions of Use</small>
+                        <small>Privacy Notice</small>
+                        <small>Your Ads Privacy Choices</small>
+                    </p>
+                    <p>
+                        <small>© 1996-2023, Amazon.com, Inc. or its affiliates</small>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</body>
+
+</html>
